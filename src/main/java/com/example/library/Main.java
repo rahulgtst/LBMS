@@ -23,14 +23,14 @@ public class Main {
                 System.out.println("-----------------");
                 System.out.print("Choose an option (1-7): ");
 
-                int choice = scanner.nextInt();
+                int choice = InputHelper.readInt(scanner);
                 scanner.nextLine();
 
                 switch (choice) {
                     case 1:
                         System.out.println("\n--- USER REGISTRATION ---");
                         System.out.print("Enter User ID: ");
-                        int userId = scanner.nextInt();
+                        int userId = InputHelper.readInt(scanner);
                         scanner.nextLine();
                         System.out.print("Enter User Name: ");
                         String userName = scanner.nextLine();
@@ -40,7 +40,7 @@ public class Main {
                     case 2:
                         System.out.println("\n--- ADD NEW BOOK ---");
                         System.out.print("Enter Book ID: ");
-                        int bookId = scanner.nextInt();
+                        int bookId = InputHelper.readInt(scanner);
                         scanner.nextLine();
                         System.out.print("Enter Book Name: ");
                         String bookName = scanner.nextLine();
@@ -62,18 +62,18 @@ public class Main {
                     case 5:
                         System.out.println("\n--- BORROW BOOK ---");
                         System.out.print("Enter Book ID to borrow: ");
-                        int borrowBookId = scanner.nextInt();
+                        int borrowBookId = InputHelper.readInt(scanner);
                         System.out.print("Enter Your User ID: ");
-                        int borrowUserId = scanner.nextInt();
+                        int borrowUserId = InputHelper.readInt(scanner);
                         library.borrowBook(borrowBookId, borrowUserId);
                         break;
 
                     case 6:
                         System.out.println("\n--- RETURN BOOK ---");
                         System.out.print("Enter Book ID to return: ");
-                        int returnBookId = scanner.nextInt();
+                        int returnBookId = InputHelper.readInt(scanner);
                         System.out.print("Enter Your User ID: ");
-                        int returnUserId = scanner.nextInt();
+                        int returnUserId = InputHelper.readInt(scanner);
                         library.returnBook(returnBookId, returnUserId);
                         break;
 
